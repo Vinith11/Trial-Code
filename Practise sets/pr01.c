@@ -1,14 +1,22 @@
-#include <stdio.h> 
-int main() {
-   int radius;
-   float area, perimeter;    
-   radius = 6;
+#include <stdio.h>
 
-   perimeter = 2*3.14*radius;
-   printf("Perimeter of the Circle = %f inches\n", perimeter);
-	
-	area = 3.14*radius*radius;
-	printf("Area of the Circle = %f square inches\n", area);
-
-return(0);
+int main(void) {
+	int t;
+	scanf("%d\n",&t);
+	while(t--)
+	{
+	   int c=0, rem=0,  r, l;
+	    scanf("%d %d",&l,&r);
+	    for(int i=l;i<=r;i++)
+	     {
+	       rem=i%10;
+	       if(rem==2 || rem==3 || rem==9)
+	        {
+              c++;
+           }
+        }
+	     printf("%d\n",c);
+	}
+	return 0;
 }
+
